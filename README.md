@@ -141,7 +141,7 @@ BM> xmodem
 ```
 
 How to start transmitting the image depends on your terminal program. With Opengear ACM7xxx, the process is as follows:
-- disconnect from pmshell with '~~~.' or '~~.' or '~.'. So 3, 2 or 1 times tilde, followed by a period.
+- disconnect from pmshell with '~~~.' or '~~.' or '~.'. So 3, 2 or 1 times tilde, followed by a period. Timing can be a bit tricky, and various terminals may cause issues. Good luck.
 - transmitting the file requires you to have copied the file to the ACM prior, Then do:
 ```lsz -X /var/mnt/storage.nvlog/apc_hw21_rpdu2g_2-5-2-5.nmc > /dev/port08 < /dev/port08```
 

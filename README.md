@@ -103,8 +103,9 @@ web -h disable -s disable
 ```
 
 ## Firmware installation
+Do not jump major versions when installing firmware. 5 -> 6 -> 7.   1 -> 2 -> 3
 
-Firmware can be installed via xmodem if something goes seriously wrong.
+Firmware can be installed via xmodem if something goes seriously wrong. See below.
 Otherwise, the CLI way to upgrade NMC2 firmware is to first scp in the aos-file, allow the device to reboot, and then scp in the application file after which the NMC reboots again.
 Sorry, I do not have notes for the bootmon file.
 
@@ -117,7 +118,7 @@ For NMC3, you just scp in the .nmc3 file.
 - 115200N81
 - reset, hit the <enter> key a few times until you see the 'BM>'-prompt
 - format flash and start xmodem:
-- ```
+```
   BM> format
 WARNING: Formatting will erase all data.
 Are you sure (Y/N)? Y
@@ -140,7 +141,7 @@ BM> xmodem
 How to start transmitting the image depends on your terminal program. With Opengear ACM7xxx, the process is as follows:
 - disconnect from pmshell with '~~~.' or '~~.' or '~.'. So 3, 2 or 1 times tilde, followed by a period.
 - transmitting the file requires you to have copied the file to the ACM prior, Then do:
-- ```lsz -X /var/mnt/storage.nvlog/apc_hw21_rpdu2g_2-5-2-5.nmc > /dev/port08 < /dev/port08```
+```lsz -X /var/mnt/storage.nvlog/apc_hw21_rpdu2g_2-5-2-5.nmc > /dev/port08 < /dev/port08```
 
 Adapt the port number in the previous command as needed.
 
@@ -149,7 +150,11 @@ Adapt the port number in the previous command as needed.
 ## Useful links/URLs
 ATS upgrade procedure - https://community.se.com/t5/EcoStruxure-IT-forum/Do-firmware-updates-require-reboots/td-p/210618#.Ye_6SJyVHLo.link
 CLI guide - https://www.apc.com/us/en/download/document/SPD_CCON-AYCELJ_EN/
-Determine NMC version - https://www.se.com/sa/en/faqs/FA285026/
+Determine NMC version 
+- https://www.se.com/sa/en/faqs/FA285026/
+- https://www.apc.com/us/en/faqs/FA228791/
+- https://community.se.com/t5/APC-UPS-Data-Center-Enterprise/How-to-determine-NMC-version-via-software/td-p/475968
+UPS firmware - https://www.apc.com/us/en/faqs/FAQ000242942/
 
 
 

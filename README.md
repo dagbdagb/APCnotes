@@ -103,7 +103,9 @@ web -h disable -s disable
 ```
 
 ## Firmware installation
-Do not jump major versions when installing firmware. 5 -> 6 -> 7.   1 -> 2 -> 3
+Do not jump major versions when installing firmware. 
+- 5 -> 6 -> 7.
+- 1 -> 2 -> 3
 
 Firmware can be installed via xmodem if something goes seriously wrong. See below.
 Otherwise, the CLI way to upgrade NMC2 firmware is to first scp in the aos-file, allow the device to reboot, and then scp in the application file after which the NMC reboots again.

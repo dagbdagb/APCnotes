@@ -148,13 +148,13 @@ Adapt the port number in the previous command as needed.
 
 
 ## Useful links/URLs
-ATS upgrade procedure - https://community.se.com/t5/EcoStruxure-IT-forum/Do-firmware-updates-require-reboots/td-p/210618#.Ye_6SJyVHLo.link
-CLI guide - https://www.apc.com/us/en/download/document/SPD_CCON-AYCELJ_EN/
-Determine NMC version 
-- https://www.se.com/sa/en/faqs/FA285026/
-- https://www.apc.com/us/en/faqs/FA228791/
-- https://community.se.com/t5/APC-UPS-Data-Center-Enterprise/How-to-determine-NMC-version-via-software/td-p/475968
-UPS firmware - https://www.apc.com/us/en/faqs/FAQ000242942/
+- ATS upgrade procedure - https://community.se.com/t5/EcoStruxure-IT-forum/Do-firmware-updates-require-reboots/td-p/210618#.Ye_6SJyVHLo.link
+- CLI guide - https://www.apc.com/us/en/download/document/SPD_CCON-AYCELJ_EN/
+- Determine NMC version 
+  - https://www.se.com/sa/en/faqs/FA285026/
+  - https://www.apc.com/us/en/faqs/FA228791/
+  - https://community.se.com/t5/APC-UPS-Data-Center-Enterprise/How-to-determine-NMC-version-via-software/td-p/475968
+- UPS firmware - https://www.apc.com/us/en/faqs/FAQ000242942/
 
 
 

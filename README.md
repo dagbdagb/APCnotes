@@ -157,4 +157,58 @@ Adapt the port number in the previous command as needed.
 - UPS firmware - https://www.apc.com/us/en/faqs/FAQ000242942/
 
 
+## Sample bash script to create APC NMC config commands
+- Save this as mkconfig.sh
+- Modify parameters in header as needed
+- Make it executable.
+- Run it with the 5 parameters at the top of the header as options. Like this: ```./mkconfig.sh whatever-ups 192.168.2.3 255.255.255.0 192.168.2.1 Wherever```
 
+```
+#!/bin/sh
+# script for generating CLI commands for configuring APC NMCs
+# Copyright Dag Bakke (2025)
+
+name=$1
+ip=$2
+mask=$3
+gw=$4
+loc=$5
+
+domain="mydomain.com"
+contact="noc@mydomain.com"
+dns1="192.168.1.1"
+dns2="192.168.1.2"
+ntp="192.168.1.1"
+traptargetip1="192.168.1.1"
+community1="communityX"
+community2="communityY"
+traptargetip1="192.168.1.1"
+traptargetip2="192.168.1.2"
+snmppollerip1="192.168.1.1"
+snmppollerip2="192.168.1.2"
+authsecret1="whatever"
+authsecret2="alsowhatever"
+privacypw1="russia_is_a_terrorist_state"
+privacypw2="slava_ukraini"
+
+userapcpw="rellybadidea"
+
+
+echo tcpip -S enable -i $ip -s $mask -g $gw -d $ domain -h $name
+echo tcpip6 -S disable
+
+echo dns -p $dns1 -s $dns2 -d $domain -h $name
+
+echo system -n $name -c $contact -l $loc -s enable
+
+echo ntp -p $ntp1 -s $ntp2 -e enable -u
+
+echo snmptrap -r1 $traptargetip1 -t1 snmpV1 -a1 enable -u1 $community1 -g1 enable
+echo snmptrap -r2 $traptargetip2 -t2 snmpV1 -a2 enable -u2 $community2 -g2 enable
+
+echo snmpv3 -S enable -u1 authpriv -a1 $authsecret1 -c1 $privacypw1 -ap1 sha -pp1 aes -ac1 enable -au1 authpriv -n1 $snmppollerip1
+echo snmpv3 -S enable -u2 authpriv -a2 $authsecret2 -c2 $privacypw2 -ap2 sha -pp2 aes -ac2 enable -au2 authpriv -n2 $snmppollerip2
+echo ftp -S disable
+echo web -h disable -s enable -mp TLS1.2 -lsp disable -lsd disable -cs 4
+user -n apc -pw $userapcpw -cp apc
+```

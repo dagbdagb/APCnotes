@@ -20,7 +20,7 @@ upsabout (for UPSes, duh)
 alarmList
 ```
 
-## Firmware
+## Firmware, NMC-generations, device-types.
 We differentiate between the primary function (UPS, PDU, ATS)   and    the NMC (Network Management Card) of your APC device.
 
 UPS and ATS (and PDU?) have firmwares for their primary function, which is distinct from the NMC firmware, and must be downloaded and installed independently.
@@ -32,11 +32,11 @@ APC has different generations of NMCs:
 - NMC3 (gen3)
 - NMC4 (gen4).
 
-Each NMC generation may have multiple model numbers.  
-- AP9630, AP9631 and AP9635 (gen2, not an exhaustive list)
-- AP9640, AP9641 and AP9643 (gen3, not an exhaustive list)
+Each NMC generation may have multiple models/modelnumbers.  
+- AP9630, AP9631, AP9635, OG-1238, AP9537SUM (gen2, not an exhaustive list)
+- AP9640, AP9641, AP9643, ON-1570 (gen3, not an exhaustive list)
 
-Some APC units have NMC as a module or plug-in card, others have it embedded.
+Some APC devices have the NMC as a module or plug-in card, others have it embedded.
 
 Two different device types (say, a UPS and a PDU) may have the same NMC, but they will need different, non-interchangeable firmware packages for their NMC, even if they have the same NMC model or generation.
 
@@ -54,6 +54,7 @@ Different NMC generations have different, incompatible firmware versions:
 - single file upload (*.nmc3)
 - installation with bundled windows app, or with scp or via web UI.
 
+Figuring out the exact generation of your NMC may require some googling.
 
 
 ## Configuration
@@ -61,3 +62,12 @@ Most configuration and relevant operations for NMC can be done via CLI, but some
 
 SYSLOG cannot be configured from CLI.
 Firewall can be enabled/disabled, but configuration requires using the web UI or uploading a specifically designed text file via SCP.
+
+
+## SSH
+
+The sshd on NMC2 does not support public key authentication, and requires that modern ssh-clients use a few extra flags:
+- fw 6.x.x:
+  ``` ssh -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa  apc@target
+  scp -O -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa filnavn apc@target:filnavn```
+- 

@@ -1,5 +1,5 @@
 # APCnotes
-Lessons learned for managing APC gear. These are my cliff-notes for handling of APC PDUs, UPSes and ATSes with NMC2 and NMC3.
+Lessons learned for managing APC gear. These are my cliff-notes for handling of APC PDUs, UPSes and ATSes with NMC2 and NMC3. Hopefully, it acts as a shortcut for someone handed to task of bringing their APC stuff up to date.
 
 ## Disclaimer
 I take no responsibility of any kind for the results of following instructions or trusting information found here. Instructions/information found on the Internet may be incomplete, incorrect, deceiving and/or malicious. Trust, but verify.

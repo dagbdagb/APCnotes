@@ -14,12 +14,12 @@ I take no responsibility of any kind for the results of following instructions o
 
 ## Useful CLI commands
 ```
-eventlog (events logged locally)
-about (will often show which NMC is installed as well as the current aos/app/bootmon versions)
-upsabout (for UPSes, duh)
-detbat -all (detailed UPS battery information)
-alarmList (shows active alarms)
-reboot (will restart NMC only, does not affect outputs)
+eventlog     (events logged locally)
+about        (will often show which NMC is installed as well as the current aos/app/bootmon versions)
+upsabout     (for UPSes, duh)
+detbat -all  (detailed UPS battery information)
+alarmList    (shows active alarms)
+reboot       (will restart NMC only, does not affect outputs)
 ```
 
 ## Firmware, NMC-generations, device-types.

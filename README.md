@@ -60,8 +60,8 @@ Figuring out the exact generation of your NMC may require some googling.
 ## Configuration
 Most configuration and relevant operations for NMC can be done via CLI, but some exceptions exist.
 
-SYSLOG cannot be configured from CLI.
-Firewall can be enabled/disabled, but configuration requires using the web UI or uploading a specifically designed text file via SCP.
+- SYSLOG cannot be configured from CLI.
+- Firewall can be enabled/disabled, but configuration requires using the web UI or uploading a specifically designed text file via SCP.
 
 
 ## SSH / SCP

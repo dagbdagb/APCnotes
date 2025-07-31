@@ -1,6 +1,8 @@
 # APCnotes
 Lessons learned for managing APC gear. These are my cliff-notes for handling of APC PDUs, UPSes and ATSes with NMC2 and NMC3. Hopefully, it acts as a shortcut for someone handed the task of bringing their APC stuff up to date. A simple bash-script at the end provides for a quick way to configure the essentials for your APC NMC.
 
+If you find errors, omissions or have information you find to fit in with the rest of this document, feel free to contribute a PR.
+
 ## Disclaimer
 I take no responsibility of any kind for the results of following instructions or trusting information found here. Instructions/information found on the Internet may be incomplete, incorrect, deceiving and/or malicious. Trust, but verify.
 

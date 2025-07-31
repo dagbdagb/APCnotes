@@ -4,11 +4,11 @@ Lessons learned for managing APC gear. These are my cliff-notes for handling of 
 ## Disclaimer
 I take no responsibility of any kind for the results of following instructions or trusting information found here. Instructions/information found on the Internet may be incomplete, incorrect, deceiving and/or malicious. Trust, but verify.
 
-## Warnings
+## !! Warnings !!
 - The APC console cable is particular to APC. Historically, there have been incidents of APC UPSes immediately shutting down with no warning for using a non-suitable console cable.
 - APC UPSes have a firmware (for the UPS-function, not the NMC) which:
     - is specific for the UPS model in question
-    - depending on UPS model, may toggle outputs when installed
+    - depending on UPS model, **may toggle outputs** when installed
     - is not part of the NMC firmware package and must be downloaded separately
 - APC ATSes have a particular procedure to follow for installing firmware. **Disregarding this may damage your ATS.**
 

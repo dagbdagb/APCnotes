@@ -15,9 +15,11 @@ I take no responsibility of any kind for the results of following hints or instr
 ## Useful CLI commands
 ```
 eventlog (events logged locally)
-about (will often show which NMC is installed)
+about (will often show which NMC is installed as well as the current aos/app/bootmon versions)
 upsabout (for UPSes, duh)
-alarmList
+detbat -all (detailed UPS battery information)
+alarmList (shows active alarms)
+reboot (will restart NMC only, does not affect outputs)
 ```
 
 ## Firmware, NMC-generations, device-types.
@@ -44,13 +46,11 @@ Two instances of the same device model (say, two UPSes of the same model) **may*
 
 Different NMC generations have different, incompatible firmware versions:
 
-### NMC2
-- 5.x.y, 6.x.y, 7.x.y.   You want to have the latest available 7.x.y version.
-- typically 3 files: aos, application and bootmon
+- 5.x.y, 6.x.y, 7.x.y.  NMC2. You want to have the latest available 7.x.y version.
+- typically 3 files: aos, $application and bootmon. bootmon may already be at the right version. 'about' in CLI will tell you what you already have.
 - installation with bundled windows app, or with scp or via web UI.
 
-### NMC3 
-- 1.x.y.z, 2.x.y.z, 3.x.y.z. Your unit might have been delivered with 3.x.y.z. Updates to version 3 require a service agreement.
+- 1.x.y.z, 2.x.y.z, 3.x.y.z.  NMC3. Your unit might have been delivered with 3.x.y.z. Updates to version 3 require a service agreement.
 - single file upload (*.nmc3)
 - installation with bundled windows app, or with scp or via web UI.
 
@@ -64,17 +64,92 @@ SYSLOG cannot be configured from CLI.
 Firewall can be enabled/disabled, but configuration requires using the web UI or uploading a specifically designed text file via SCP.
 
 
-## SSH
+## SSH / SCP
 
-The sshd on NMC2 does not support public key authentication, and requires that modern ssh-clients use a few extra flags:
+If sshd does not respond, check if it responds to telnet. enabling ssh disables telnet (and vice versa?).
+If neither works, enable ssh via http/https.
+If http/https does not work, check section SSL / https below.
+If everything fails, check relevant firewalls. If even that fails to explain anything, get an APC  console cable.
+
+The sshd on NMC2 does not support public key authentication.
+Modern ssh-clients may have to use a few extra flags:
 - fw 6.x.x:
   ```
   ssh -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa  apc@target
   scp -O -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
   ```
-- fw 6.x.x:
+- fw 7.x.x:
   ```
   ssh -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa  apc@target
   scp -O -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
   ```
+If you use DNS, these extra flags may be encoded into your ```.ssh/config```. Do note that you must provide a target *filename*, not just the directory.
+
+
+# SSL / https
+
+The onboard SSL-certificate may have expired. If so, the onboard webserver refuses to start http*s*. And the client will report nothing useful. The fix is to delete the onboard cert and restart the NMC.
+```
+ssh target
+cd ssl
+dir
+delete defaultcert.p15
+reboot
+```
+
+That said, the NMC2 is end of life. It may be safer to just disable the webserver altogether:
+```
+web -h disable -s disable
+```
+
+## Firmware installation
+
+Firmware can be installed via xmodem if something goes seriously wrong.
+Otherwise, the CLI way to upgrade NMC2 firmware is to first scp in the aos-file, allow the device to reboot, and then scp in the application file after which the NMC reboots again.
+Sorry, I do not have notes for the bootmon file.
+
+For NMC3, you just scp in the .nmc3 file.
+
+
+## Firmware recovery
+
+- Use cable part# 940-0144A
+- 115200N81
+- reset, hit the <enter> key a few times until you see the 'BM>'-prompt
+- format flash and start xmodem:
+- ```
+  BM> format
+WARNING: Formatting will erase all data.
+Are you sure (Y/N)? Y
+
+Formatting...
+complete.
+BM> help
+?
+help
+boot
+reset
+sysinfo
+mfginfo
+xmodem
+format
+
+BM> xmodem
+```
+
+How to start transmitting the image depends on your terminal program. With Opengear ACM7xxx, the process is as follows:
+- disconnect from pmshell with '~~~.' or '~~.' or '~.'. So 3, 2 or 1 times tilde, followed by a period.
+- transmitting the file requires you to have copied the file to the ACM prior, Then do:
+- ```lsz -X /var/mnt/storage.nvlog/apc_hw21_rpdu2g_2-5-2-5.nmc > /dev/port08 < /dev/port08```
+
+Adapt the port number in the previous command as needed.
+
+
+
+## Useful links/URLs
+ATS upgrade procedure - https://community.se.com/t5/EcoStruxure-IT-forum/Do-firmware-updates-require-reboots/td-p/210618#.Ye_6SJyVHLo.link
+CLI guide - https://www.apc.com/us/en/download/document/SPD_CCON-AYCELJ_EN/
+Determine NMC version - https://www.se.com/sa/en/faqs/FA285026/
+
+
 

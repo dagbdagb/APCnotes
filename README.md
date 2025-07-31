@@ -2,7 +2,7 @@
 Lessons learned for managing APC gear. These are my cliff-notes for handling of APC PDUs, UPSes and ATSes with NMC2 and NMC3.
 
 ## Disclaimer
-I take no responsibility of any kind for the results of following instructions or trusting information found here. Instructions/information may be incomplete, incorrect, deceiving and/or malicious.
+I take no responsibility of any kind for the results of following instructions or trusting information found here. Instructions/information found on the Internet may be incomplete, incorrect, deceiving and/or malicious. Trust, but verify.
 
 ## Warnings
 - The APC console cable is particular to APC. Historically, there have been incidents of APC UPSes immediately shutting down with no warning for using a non-suitable console cable.

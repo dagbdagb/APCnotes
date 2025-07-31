@@ -10,11 +10,12 @@ I take no responsibility of any kind for the results of following hints or instr
 - APC ATSes have a particular procedure to follow for installing firmware. Disregarding this may damage your ATS
 
 ## Useful CLI commands
-
+```
 eventlog (events logged locally)
 about (will often show which NMC is installed)
-upsabout (you know, it works for UPS)
+upsabout (for UPSes, duh)
 alarmList
+```
 
 ## Firmware
 We differentiate between the primary function (UPS, PDU, ATS)   and    the NMC (Network Management Card) of your APC device.

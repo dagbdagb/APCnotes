@@ -12,7 +12,7 @@ I take no responsibility of any kind for the results of following instructions o
     - is specific for the UPS model in question
     - depending on UPS model, **may toggle outputs** when installed
     - is not part of the NMC firmware package and must be downloaded separately
-- APC ATSes have a particular procedure to follow for installing firmware. **Disregarding this may damage your ATS.**
+- APC ATSes have a particular procedure to follow for installing firmware. **Disregarding this may damage your ATS and/or depower loads.**
 
 ## Useful CLI commands
 ```

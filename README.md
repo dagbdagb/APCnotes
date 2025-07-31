@@ -5,9 +5,12 @@ Lessons learned for managing APC gear. These are my cliff-notes for handling of 
 I take no responsibility of any kind for the results of following hints or instructions here. Instructions may be incomplete, incorrect, deceiving and/or malicious.
 
 ## Warnings
-- The APC console cable is particular to APC. Historically, there have been incidents of APC UPSes shutting down with no warning for using a non-suitable console cable.
-- APC UPSes have a firmware (for the UPS-function, not the NMC) which, depending on the model of UPS, may shut down outputs when installed.
-- APC ATSes have a particular procedure to follow for installing firmware. Disregarding this may damage your ATS
+- The APC console cable is particular to APC. Historically, there have been incidents of APC UPSes immediately shutting down with no warning for using a non-suitable console cable.
+- APC UPSes have a firmware (for the UPS-function, not the NMC) which:
+    - is specific for the UPS model in question
+    - depending on UPS model, may toggle outputs when installed
+    - is not part of the NMC firmware package and must be downloaded separately
+- APC ATSes have a particular procedure to follow for installing firmware. **Disregarding this may damage your ATS.**
 
 ## Useful CLI commands
 ```
@@ -35,9 +38,9 @@ Each NMC generation may have multiple model numbers.
 
 Some APC units have NMC as a module or plug-in card, others have it embedded.
 
-Tow different device types (say, a UPS and a PDU) may have the same NMC, but they will need different, non-interchangeable firmware packages for their NMC, even if they have the same NMC model or generation.
+Two different device types (say, a UPS and a PDU) may have the same NMC, but they will need different, non-interchangeable firmware packages for their NMC, even if they have the same NMC model or generation.
 
-Two instances of the same UPS, PDU or ATS **may** have been delivered with different NMC generations.
+Two instances of the same device model (say, two UPSes of the same model) **may** have been delivered with different NMC generations.
 
 Different NMC generations have different, incompatible firmware versions:
 

@@ -68,6 +68,13 @@ Firewall can be enabled/disabled, but configuration requires using the web UI or
 
 The sshd on NMC2 does not support public key authentication, and requires that modern ssh-clients use a few extra flags:
 - fw 6.x.x:
-  ``` ssh -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa  apc@target
-  scp -O -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa filnavn apc@target:filnavn```
-- 
+  ```
+  ssh -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa  apc@target
+  scp -O -c 3des-cbc -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
+  ```
+- fw 6.x.x:
+  ```
+  ssh -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa  apc@target
+  scp -O -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
+  ```
+

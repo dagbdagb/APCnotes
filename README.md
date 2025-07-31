@@ -158,10 +158,14 @@ Adapt the port number in the previous command as needed.
 
 
 ## Sample bash script to create APC NMC config commands
-- Save this as mkconfig.sh
+- Save the script below as mkconfig.sh
 - Modify parameters in header as needed
 - Make it executable.
-- Run it with the 5 parameters at the top of the header as options. Like this: ```./mkconfig.sh whatever-ups 192.168.2.3 255.255.255.0 192.168.2.1 Wherever```
+- Run it with the 5 parameters at the top of the header as options.
+Like this: ```./mkconfig.sh whatever-ups 192.168.2.3 255.255.255.0 192.168.2.1 Wherever```
+
+The output can be pasted straight into the NMC CLI.
+
 
 ```
 #!/bin/sh

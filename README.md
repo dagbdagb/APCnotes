@@ -86,7 +86,7 @@ Modern ssh-clients may have to use a few extra flags:
 If you use DNS, these extra flags may be encoded into your ```.ssh/config```. Do note that you must provide a target *filename*, not just the directory.
 
 
-# SSL / https
+## SSL / https
 
 The onboard SSL-certificate may have expired. If so, the onboard webserver refuses to start http*s*. And the client will report nothing useful. The fix is to delete the onboard cert and restart the NMC.
 ```

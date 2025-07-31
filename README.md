@@ -106,8 +106,8 @@ web -h disable -s disable
 ```
 
 ## Firmware installation
-Do not jump major versions when installing firmware. 
-- 5 -> 6 -> 7.
+Do not jump major versions when installing firmware. Upgrade to the next major version after the one you have. I do not know for certain that any 6.x.y can be upgraded top 7.x.y. See releasenotes.
+- 5 -> 6 -> 7
 - 1 -> 2 -> 3
 
 Firmware can be installed via xmodem if something goes seriously wrong. See below.

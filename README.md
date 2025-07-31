@@ -217,6 +217,6 @@ echo snmptrap -r2 $traptargetip2 -t2 snmpV1 -a2 enable -u2 $community2 -g2 enabl
 echo snmpv3 -S enable -u1 authpriv -a1 $authsecret1 -c1 $privacypw1 -ap1 sha -pp1 aes -ac1 enable -au1 authpriv -n1 $snmppollerip1
 echo snmpv3 -S enable -u2 authpriv -a2 $authsecret2 -c2 $privacypw2 -ap2 sha -pp2 aes -ac2 enable -au2 authpriv -n2 $snmppollerip2
 echo ftp -S disable
-echo web -h disable -s enable -mp TLS1.2 -lsp disable -lsd disable -cs 4
+echo web -h disable -s enable -mp TLS1.2 -lsp disable -lsd disable
 echo user -n apc -pw $userapcpw -cp apc
 ```

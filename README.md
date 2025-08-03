@@ -48,15 +48,18 @@ Two instances of the same device model (say, two UPSes of the same model) **may*
 
 Different NMC generations have different, incompatible firmware versions:
 
-- 5.x.y, 6.x.y, 7.x.y.  NMC2. You want to have the latest available 7.x.y version.
+- 5.x.y, 6.x.y, 7.x.y.  NMC2*. You want to have the latest available 7.x.y version.
   - typically 3 files: aos, $application and bootmon. bootmon may already be at the right version. 'about' in CLI will tell you what you already have.
   - installation with bundled windows app, or with scp or via web UI.
+  - again: you need the right package for your combination of UPS/PDU/ATS and NMC
 
 - 1.x.y.z, 2.x.y.z, 3.x.y.z.  NMC3. Your unit might have been delivered with 3.x.y.z. Updates to version 3 require a service agreement.
   - single file upload (*.nmc3)
   - installation with bundled windows app, or with scp or via web UI.
+  - again: you need the right package for your combination of UPS/PDU/ATS and NMC
 
 Figuring out the exact generation of your NMC may require some googling.
+*) I find claims (on official web-pages) that some NMC3s can run the very latest 7.x firmware. APC support denies this, and there isn't really any reason to actually do this at this point in time. But you may possibly come across NMC3s having shipped with this code. So even if your device runs 7.x something, check the actual NMC model number and verify what it is.
 
 
 ## Configuration

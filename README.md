@@ -42,7 +42,7 @@ Each NMC generation may have multiple models/modelnumbers.
 
 Some APC devices have the NMC as a module or plug-in card, others have it embedded.
 
-Two different device types (say, a UPS and a PDU) may have the same NMC, but they will need different, non-interchangeable firmware packages for their NMC, even if they have the same NMC model or generation.
+Two different device types (say, a UPS and a PDU) may appear to have the same NMC, but they will need different, non-interchangeable firmware packages for their NMC, even if they appear to have the same NMC model or generation.
 
 Two instances of the same device model (say, two UPSes of the same model) **may** have been delivered with different NMC generations.
 

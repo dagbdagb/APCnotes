@@ -71,7 +71,7 @@ Most configuration and relevant operations for NMC can be done via CLI, but some
 
 ## SSH / SCP
 
-If sshd does not respond, check if it responds to telnet. enabling ssh disables telnet (and vice versa?).
+If sshd does not respond, check if it responds to telnet. Enabling ssh disables telnet (and vice versa?).
 If neither works, enable ssh via http/https.
 If http/https does not work, check section SSL / https below.
 If everything fails, check relevant firewalls. If even that fails to explain anything, get an APC  console cable.

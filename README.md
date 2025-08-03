@@ -52,7 +52,7 @@ Two instances of the same device model (say, two UPSes of the same model) **may*
 
 Different NMC generations have different, incompatible firmware versions:
 
-- 5.x.y, 6.x.y, 7.x.y.  NMC2__*__. You want to have the latest available 7.x.y version.
+- 5.x.y, 6.x.y, 7.x.y.  NMC2 __*__. You want to have the latest available 7.x.y version.
   - typically 3 files: aos, $application and bootmon. bootmon may already be at the right version. 'about' in CLI will tell you what you already have.
   - installation with bundled windows app, or with scp or via web UI.
   - again: you need the right package for your combination of UPS/PDU/ATS and NMC

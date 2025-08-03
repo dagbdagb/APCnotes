@@ -59,7 +59,7 @@ Different NMC generations have different, incompatible firmware versions:
   - again: you need the right package for your combination of UPS/PDU/ATS and NMC
 
 Figuring out the exact generation of your NMC may require some googling.
-*) I find claims (on official web-pages) that some NMC3s can run the very latest 7.x firmware. APC support denies this, and there isn't really any reason to actually do this at this point in time. But you may possibly come across NMC3s having shipped with this code. So even if your device runs 7.x something, check the actual NMC model number and verify what it is.
+*) I find claims (on official web-pages) that some NMC3s can run the very latest 7.x firmware. APC support denies this, and there isn't really any reason to actually do this at this point in time. But you may possibly come across NMC3s having shipped with this code. So even if your device runs 7.x something, check the actual NMC model number and verify what generation it is.
 
 
 ## Configuration

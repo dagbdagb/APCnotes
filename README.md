@@ -92,6 +92,8 @@ Modern ssh-clients may have to use a few extra flags:
   ssh -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa  apc@target
   scp -O -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
   ```
+Older scp-clients do not understand the '-O'-flag.
+
 These extra flags may be encoded into your ```.ssh/config```.
 Do note that you must provide a target *filename* with scp on APC, not just the directory.
 

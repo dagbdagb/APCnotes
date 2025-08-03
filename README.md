@@ -31,7 +31,7 @@ reboot       (will restart NMC only, does not affect outputs)
 ## Firmware, NMC-generations, device-types.
 We differentiate between the primary function (UPS, PDU, ATS)   and    the NMC (Network Management Card) of your APC device.
 
-UPS and ATS (and PDU?) have firmwares for their primary function, which is distinct from the NMC firmware, and must be downloaded and installed independently.
+UPS and ATS (and PDU?) have firmwares for their primary function (which is distinct from the NMC firmware), which must be downloaded and installed independently.
 Nevertheless, NMC firmware may require specific primary function firmware to work correctly.
 
 APC has different generations of NMCs: 

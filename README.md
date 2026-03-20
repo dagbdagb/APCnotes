@@ -97,7 +97,7 @@ Older scp-clients do not understand the '-O'-flag.
 
 These extra flags may be encoded into your ```.ssh/config```.
 
-Do note that you must provide a target *filename* with scp on APC, not just the directory.
+**-->   Do note** that you must provide a target **filename** when scp'ing a file to an APC NMC, not just the directory. **<--**
 
 
 ## SSL / https

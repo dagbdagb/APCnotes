@@ -59,7 +59,7 @@ Different NMC generations have different, incompatible firmware versions:
   - installation with bundled windows app, or with scp or via web UI.
   - again: you need the right package for your combination of UPS/PDU/ATS and NMC
 
-- 1.x.y.z, 2.x.y.z, 3.x.y.z.  NMC3. Your unit might have been delivered with 3.x.y.z. Updates to version 3 require a service agreement.
+- 1.x.y.z, 2.x.y.z, 3.x.y.z.  NMC3. Your unit might have been delivered with 3.x.y.z. **Updates to version 3 require a service agreement. Images are not generally available.**
   - single file upload (*.nmc3)
   - installation with bundled windows app, or with scp or via web UI.
   - again: you need the right package for your combination of UPS/PDU/ATS and NMC

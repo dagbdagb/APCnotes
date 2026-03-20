@@ -1,4 +1,4 @@
-# APC notes for CLI management of NMC
+# Notes for CLI management of APC NMCs
 Lessons learned for managing APC gear from CLI. 
 
 These are my cliff-notes for handling of APC PDUs, UPSes and ATSes with NMC2 and NMC3. Hopefully, it acts as a shortcut for someone handed the task of bringing their APC stuff up to date. A few oddities and gotchas are described below.

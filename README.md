@@ -59,12 +59,12 @@ Different NMC generations have different, incompatible firmware versions:
 - 5.x.y, 6.x.y, 7.x.y.  NMC2 __*__. You want to have the latest available 7.x.y version.
   - typically 3 files: aos, $application and bootmon. bootmon may already be at the right version. 'about' in CLI will tell you what you already have.
   - installation with bundled windows app, or with scp or via web UI.
-  - again: you need the right package for your combination of UPS/PDU/ATS and NMC
+  - again: you need the right package for your combination of UPS/PDU/ATS and NMC, and the NMC firmware consists of three distinct files uploaded separately.
 
 - 1.x.y.z, 2.x.y.z, 3.x.y.z.  NMC3. Your unit might have been delivered with 3.x.y.z. **Updates to version 3 require a service agreement. Images are not generally available.**
   - single file upload (*.nmc3)
   - installation with bundled windows app, or with scp or via web UI.
-  - again: you need the right package for your combination of UPS/PDU/ATS and NMC
+  - again: you need the right package for your combination of UPS/PDU/ATS and NMC. The NMC firmware is a single file.
 
 Figuring out the exact generation of your NMC may require some googling.
 

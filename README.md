@@ -143,8 +143,10 @@ Do not jump major versions when installing NMC firmware. Upgrade to the next maj
 - 1 -> 2 -> 3
 
 Firmware can be installed via xmodem if something goes seriously wrong. See below.
-Otherwise, the CLI way to upgrade NMC2 firmware is to first scp in the aos-file, allow the device to reboot, and then scp in the application file after which the NMC reboots again.
-Sorry, I do not have notes for the bootmon file.
+Otherwise, the CLI way to upgrade NMC2 firmware is like this:
+- scp in the bootmon file *if required*, allow the device to reboot
+- then the aos-file, allow the device to reboot,
+- and finally scp in the application file after which the NMC reboots again.
 
 For NMC3, you just scp in the .nmc3 file.
 

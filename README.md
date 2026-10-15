@@ -75,6 +75,17 @@ Figuring out the exact generation of your NMC may require some googling.
 NMCs with an RJ12 console port should work with the cable marked 940-
 NMCs with a 2.5mm jack style port (TRS) works with the cable marked 940-0299 (db9-trs) or 940-0299A (usb-trs). AP9630, AP9631
 
+
+## Factory reset
+This information nicked from [zaage.it](https://zaage.it/tutorials/reset-an-apc-network-management-card/)
+
+Resetting the Admin Password: To reset the admin password, hold the reset button for 5 seconds and then press it again when the status LED blinks. This allows to reset the admin password for the NMC, which comes in handy when you forget the password or need to change it for security reasons.
+
+Restoring to Factory Defaults (DHCP Mode): For a complete factory reset of the NMC, hold the reset button for 20 seconds and then press it again when the status LED started flashing rapidly. This restores the card to its original factory defaults and switches it to DHCP mode, erasing all previous settings.
+
+It’s worth noting that these reset procedures may also work for other APC NMCs, such as AP95xx and AP96xx models, as they generally have similar reset methods.
+
+
 ## Configuration
 Most configuration and relevant operations for NMC can be done via CLI, but some notable exceptions exist. The most annoying ones to me are:
 

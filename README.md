@@ -72,8 +72,8 @@ Figuring out the exact generation of your NMC may require some googling.
 
 
 ## Console Cables
-NMCs with an RJ12 console port should work with the cable marked 940-
-NMCs with a 2.5mm jack style port (TRS) works with the cable marked 940-0299 (db9-trs) or 940-0299A (usb-trs). AP9630, AP9631
+- NMCs with an RJ12 console port should work with the cable marked 940-0144 or 940-0144A
+- NMCs with a 2.5mm jack style port (TRS) works with the cable marked 940-0299 (db9-trs) or 940-0299A (usb-trs). AP9630, AP9631
 
 
 ## Factory reset

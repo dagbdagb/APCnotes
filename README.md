@@ -97,12 +97,13 @@ Most configuration and relevant operations for NMC can be done via CLI, but some
 
 ## SSH / SCP
 
-If sshd does not respond, check if it responds to telnet. Enabling ssh disables telnet (and vice versa?).
-If neither works, enable ssh via http/https.
-If http/https does not work, check section SSL / https below.
-If everything fails, check relevant firewalls. If even that fails to explain anything, get an APC  console cable.
+- If sshd does not respond, check if it responds to telnet. Enabling ssh disables telnet (and vice versa?).
+- If neither works, enable ssh via http/https.
+- If http/https does not work, check section SSL / https below.
+- If everything fails, check relevant firewalls.
+- If even that fails to explain anything, get an APC  console cable.
 
-The sshd on NMC2 does not support public key authentication.
+The sshd on NMC2 does not support public key authentication. Password only.
 Modern ssh-clients may have to use a few extra flags:
 - fw 6.x.x:
   ```
@@ -114,7 +115,7 @@ Modern ssh-clients may have to use a few extra flags:
   ssh -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa  apc@target
   scp -O -c aes128-ctr -oHostKeyAlgorithms=+ssh-rsa sourcefile apc@target:targetfile
   ```
-Older scp-clients do not understand the '-O'-flag.
+Older scp-clients (pre OpenSSH 9.0) do not understand the '-O'-flag. Which is OK, as they use the legacy scp protocol by default. As do the NMCs.  
 
 These extra flags may be encoded into your ```.ssh/config```.
 

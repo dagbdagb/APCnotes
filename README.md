@@ -71,6 +71,10 @@ Figuring out the exact generation of your NMC may require some googling.
 *) I find claims (on official web-pages) that some NMC3s can run the very latest 7.x firmware. APC support will in my experience refute this, and there isn't really any reason to actually do this at this point in time. But you may possibly come across NMC3s having shipped with this code. So even if your device runs 7.x something, check the actual NMC model number and verify what generation it is.
 
 
+## Console Cables
+NMCs with an RJ12 console port should work with the cable marked 940-
+NMCs with a 2.5mm jack style port (TRS) works with the cable marked 940-0299 (db9-trs) or 940-0299A (usb-trs). AP9630, AP9631
+
 ## Configuration
 Most configuration and relevant operations for NMC can be done via CLI, but some notable exceptions exist. The most annoying ones to me are:
 

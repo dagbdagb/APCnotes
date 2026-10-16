@@ -216,7 +216,7 @@ Adapt the port number in the previous command as needed.
 Like this: ```./mkconfig.sh whatever-ups 192.168.2.3 255.255.255.0 192.168.2.1 Wherever```
 
 The output can be pasted straight into the NMC CLI.
-
+The exact syntax of the `web` command is highly dependent on the NMC firmware version and may need some tuning.
 
 ```
 #!/bin/sh

@@ -70,14 +70,14 @@ Figuring out the exact generation of your NMC may require some googling.
 
 *) I find claims (on official web-pages) that some NMC3s can run the very latest 7.x firmware. APC support will in my experience refute this, and there isn't really any reason to actually do this at this point in time. But you may possibly come across NMC3s having shipped with this code. So even if your device runs 7.x something, check the actual NMC model number and verify what generation it is.
 
-As for UPS firmware: 
-Not all of them are upgradeable. I suggest using the firmware upgrade wizard to find the right firmware and to figure out if the outputs will toggle when updating the firmware. 
+#### UPS firmware 
+Not all UPS models are upgradeable. I suggest using the firmware upgrade wizard to find the right firmware and to figure out if the outputs will toggle when updating the firmware. 
 
 Relevant URLs:
 
-https://www.se.com/us/en/faqs/FA164737/
-https://www.se.com/us/en/faqs/FA279197/
-https://www.se.com/us/en/download/document/Smart-UPS_FW_Release_Notes/
+- https://www.se.com/us/en/faqs/FA164737/
+- https://www.se.com/us/en/faqs/FA279197/
+- https://www.se.com/us/en/download/document/Smart-UPS_FW_Release_Notes/
 
 
 ## Console Cables

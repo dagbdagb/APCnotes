@@ -156,7 +156,7 @@ For NMC3, you just scp in the .nmc3 file.
 
 ## Firmware recovery
 
-- Use cable part# 940-0144A
+- Use the appropriate console cable for your NMC, see above.
 - 115200N81
 - reset, hit the <enter> key a few times until you see the 'BM>'-prompt
 - format flash and start xmodem:
